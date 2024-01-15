@@ -40,7 +40,7 @@ def main():
 	rospy.init_node('service_node')
 	
 	#define the subscriber: it gets from "Odom" the position and the velocity
-	sub_result = rospy.Subscriber('/reaching_goal/result', assignment_2_2023.msg.PlanningActionResult, results)
+	sub_result = rospy.Subscriber('/reaching_goal/result', assignment_2_2023.msg.PlanningActionResult, target_callback)
 	
 	#keep the node running
 	rospy.spin()
